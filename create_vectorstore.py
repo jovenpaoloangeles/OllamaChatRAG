@@ -2,7 +2,7 @@ import os
 import streamlit as st
 from langchain_chroma import Chroma
 from langchain_community.document_loaders import DirectoryLoader, UnstructuredFileLoader
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain.text_splitter import RecursiveCharacterTextSplitter, SentenceTransformersTokenTextSplitter
 from langchain_ollama import OllamaEmbeddings
 import shutil
 import logging
@@ -24,7 +24,7 @@ class SafeUnstructuredFileLoader(UnstructuredFileLoader):
             logger.error(f"Error loading file {self.file_path}: {str(e)}")
             return []
 
-def create_vectorstore(data_dir="data", persist_dir="chroma_db", chunk_size=1000, chunk_overlap=200, force_reindex=False):
+def create_vectorstore(data_dir="data", persist_dir="chroma_db", chunk_size=1000, chunk_overlap=200, force_reindex=False, use_sentence_window=True):
     """Create a vector store from documents in the data directory"""
     # Check if index already exists and force_reindex is False
     if index_exists(persist_dir) and not force_reindex:
@@ -69,12 +69,38 @@ def create_vectorstore(data_dir="data", persist_dir="chroma_db", chunk_size=1000
         
         # Split documents into chunks
         logger.info("Splitting documents into chunks")
-        text_splitter = RecursiveCharacterTextSplitter(
-            chunk_size=chunk_size,
-            chunk_overlap=chunk_overlap
-        )
-        chunks = text_splitter.split_documents(documents)
-        logger.info(f"Created {len(chunks)} chunks from {len(documents)} documents")
+        
+        if use_sentence_window:
+            # First split into smaller chunks using RecursiveCharacterTextSplitter
+            pre_splitter = RecursiveCharacterTextSplitter(
+                chunk_size=chunk_size,
+                chunk_overlap=chunk_overlap
+            )
+            pre_split_docs = pre_splitter.split_documents(documents)
+            logger.info(f"Created {len(pre_split_docs)} initial chunks from {len(documents)} documents")
+            
+            # Then apply sentence transformer token splitter for better semantic chunking
+            sentence_splitter = SentenceTransformersTokenTextSplitter(
+                chunk_overlap=50,
+                tokens_per_chunk=256
+            )
+            chunks = sentence_splitter.split_documents(pre_split_docs)
+            logger.info(f"Created {len(chunks)} sentence-based chunks from {len(pre_split_docs)} initial chunks")
+            
+            # Add source document metadata for better traceability
+            for i, chunk in enumerate(chunks):
+                if "source" in chunk.metadata:
+                    chunk.metadata["chunk_id"] = f"{chunk.metadata['source']}_chunk_{i}"
+                else:
+                    chunk.metadata["chunk_id"] = f"chunk_{i}"
+        else:
+            # Use traditional chunking method
+            text_splitter = RecursiveCharacterTextSplitter(
+                chunk_size=chunk_size,
+                chunk_overlap=chunk_overlap
+            )
+            chunks = text_splitter.split_documents(documents)
+            logger.info(f"Created {len(chunks)} chunks from {len(documents)} documents")
         
         # Create embeddings using Ollama's nomic-embed-text
         logger.info("Creating embeddings using nomic-embed-text")
