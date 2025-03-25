@@ -353,8 +353,29 @@ def generate_visualizations(processed_results):
     return df_sorted
 
 def main():
-    # File path
-    file_path = 'evaluation_results/final_evaluation_results_20250321_091625.json'
+    # Find the latest evaluation results file
+    import os
+    import glob
+    from pathlib import Path
+    
+    # Get the latest evaluation results file
+    results_dir = Path('evaluation_results')
+    if not results_dir.exists():
+        print(f"Error: evaluation_results directory not found")
+        return
+    
+    # Find all files that start with 'final_evaluation_results_'
+    result_files = list(results_dir.glob("final_evaluation_results_*.json"))
+    
+    if not result_files:
+        print("Error: No evaluation results files found")
+        return
+    
+    # Sort by modification time (most recent first)
+    latest_file = max(result_files, key=lambda x: x.stat().st_mtime)
+    file_path = str(latest_file)
+    
+    print(f"Using latest results file: {file_path}")
     
     # Load the evaluation results
     results = load_evaluation_results(file_path)

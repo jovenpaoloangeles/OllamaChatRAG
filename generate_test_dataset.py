@@ -1,3 +1,11 @@
+# Load Gemini API using your API key - palitan mo na lang ng ibang API
+# Find all PDFs in a given folder.
+# For each PDF:
+#   Extract the text using a safe file loader.
+#   Send the text to Gemini with a prompt asking for simple factual QA pairs. (you can make it more complex)
+#   Parse the JSON response and tag each QA pair with the source PDF name.
+# Save all QA pairs to a single JSON file.
+####### Double check if the each QA pair is factual manually #####
 import os
 import json
 import argparse
@@ -10,7 +18,7 @@ import logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-# Configure Gemini API
+# Configure Gemini API - palitan mo na lang ng ibang API
 def configure_genai(api_key):
     """Configure the Gemini API with the provided API key"""
     genai.configure(api_key=api_key)
@@ -25,7 +33,7 @@ class SafeUnstructuredFileLoader(UnstructuredFileLoader):
             logger.error(f"Error loading file {self.file_path}: {str(e)}")
             return []
 
-def extract_text_from_pdf(pdf_path):
+def extract_text_from_pdf(pdf_path): #If you can find a better way to do this, e.g. uploading a file directly to the LLM, isip pa ko
     """Extract text content from a PDF file"""
     try:
         logger.info(f"Loading {pdf_path}")

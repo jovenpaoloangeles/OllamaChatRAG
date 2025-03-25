@@ -1,0 +1,571 @@
+{
+  "metadata": {
+    "timestamp": "2025-03-21T09:01:16.324098",
+    "models": [
+      "phi4-mini:latest",
+      "qwen2.5:1.5b",
+      "qwen2.5:3b",
+      "qwen2.5:latest",
+      "llama3.2:latest",
+      "deepseek-r1:1.5b",
+      "llama3.2:1b",
+      "gemma3:1b",
+      "llama3.1:latest"
+    ],
+    "use_reranking": true,
+    "rerank_top_k": 3,
+    "k_docs": 5,
+    "temperature": 0.3
+  },
+  "questions": [
+    {
+      "question": "What is the total amount of new appropriations for the Department of Science and Technology (DOST) for FY 2025?",
+      "true_answer": "The total new appropriations for DOST for FY 2025 is P28.46 billion.",
+      "source": "ABN2024-25_DOST_FY2025.pdf",
+      "model_answers": {
+        "phi4-mini:latest": {
+          "answer": "The total amount of new appropriations for the Department of Science and Technology (DOST) for FY 2025 is p28. 46 billion.",
+          "time_taken": 3.388727903366089,
+          "token_count": 30,
+          "tokens_per_second": 8.852879562918115
+        },
+        "qwen2.5:1.5b": {
+          "answer": "<p28. 46 billion",
+          "time_taken": 1.8842017650604248,
+          "token_count": 4,
+          "tokens_per_second": 2.1229148991226654
+        },
+        "qwen2.5:3b": {
+          "answer": "The total amount of new appropriations for the Department of Science and Technology (DOST) for FY 2025 is p28. 46 billion.",
+          "time_taken": 2.609604597091675,
+          "token_count": 30,
+          "tokens_per_second": 11.495994463465497
+        },
+        "qwen2.5:latest": {
+          "answer": "The total amount of new appropriations for the Department of Science and Technology (DOST) for FY 2025 is **P28.46 billion**.",
+          "time_taken": 4.293394088745117,
+          "token_count": 31,
+          "tokens_per_second": 7.220394717844489
+        },
+        "llama3.2:latest": {
+          "answer": "<partial_answer>\nThe total amount of new appropriations for the Department of Science and Technology (DOST) for FY 2025 is P28.46 billion, according to Table 1 in the context.",
+          "time_taken": 3.982119560241699,
+          "token_count": 43,
+          "tokens_per_second": 10.798269451605835
+        },
+        "deepseek-r1:1.5b": {
+          "answer": "<think>\nOkay, so I need to figure out the total amount of new appropriations for the Department of Science and Technology (DOST) in FY 2025 based on the provided context. Let me read through the context carefully.\n\nFirst, I see that there are two tables mentioned. The first table is about the budget for FY 2025, which states that DOST's total appropriations will be p28.77 billion (which is 341.9 million), and this is 1.2% higher than the 2024 budget of p28.43 billion. The main sources are new appropriations at p28.46 billion and automatic appropriations at p315.3 million.\n\nThe second table provides more details about the maintenance and other operating expenses (Mooe), capital outlay (Co), and new appropriations by cost structure for FY 2025. It mentions that new appropriations amount to p28.46 billion, which is a significant portion of the total budget.\n\nSo, putting this together, the total new appropriations are given in both tables. The first table clearly states it's p28.46 billion, while the second table also confirms that part of the total budget comes from new appropriations at p28.46 billion. Therefore, I can confidently say that the total amount of new appropriations for DOST in FY 2025 is p28.46 billion.\n</think>\n\nThe total amount of new appropriations for the Department of Science and Technology (DOST) for FY 2025 is **p28.46 billion**.",
+          "time_taken": 4.617150783538818,
+          "token_count": 342,
+          "tokens_per_second": 74.07165501705228
+        },
+        "llama3.2:1b": {
+          "answer": "I don't have enough information to answer this question.\n\nThe context does not provide a clear and complete answer regarding the total amount of new appropriations for the Department of Science and Technology (DOST) for FY 2025.",
+          "time_taken": 2.509226083755493,
+          "token_count": 57,
+          "tokens_per_second": 22.716167494437006
+        },
+        "gemma3:1b": {
+          "answer": "p28. 46 billion\n",
+          "time_taken": 2.1929633617401123,
+          "token_count": 4,
+          "tokens_per_second": 1.8240158817911156
+        },
+        "llama3.1:latest": {
+          "answer": "The total amount of new appropriations for the Department of Science and Technology (DOST) for FY 2025 is P28.46 billion.",
+          "time_taken": 9.303215503692627,
+          "token_count": 30,
+          "tokens_per_second": 3.224691504576285
+        }
+      }
+    },
+    {
+      "question": "Which DOST attached agency will have the highest Maintenance and Other Operating Expenses (MOOE) in the proposed 2025 budget?",
+      "true_answer": "The Science Education Institute (SEI) will have the highest proposed MOOE amounting to P7.40 billion.",
+      "source": "ABN2024-25_DOST_FY2025.pdf",
+      "model_answers": {
+        "phi4-mini:latest": {
+          "answer": "The Science Education Institute (SEI) will have the highest proposed Maintenance and Other Operating Expenses (MOOE) amounting to P7.40 billion in its 2025 budget proposal.",
+          "time_taken": 3.79382586479187,
+          "token_count": 43,
+          "tokens_per_second": 11.334204977370248
+        },
+        "qwen2.5:1.5b": {
+          "answer": "The agency that will have the highest Maintenance and Other Operating Expenses (MOOE) in the proposed 2025 budget is Pagasa with an allocation of P611 million.",
+          "time_taken": 2.0397772789001465,
+          "token_count": 39,
+          "tokens_per_second": 19.119734494262485
+        },
+        "qwen2.5:3b": {
+          "answer": "The Science Education Institute (SEI) will have the highest proposed MOOE amounting to P7.40 billion.",
+          "time_taken": 2.5037615299224854,
+          "token_count": 25,
+          "tokens_per_second": 9.984976484870739
+        },
+        "qwen2.5:latest": {
+          "answer": "The Science Education Institute (SEI) will have the highest proposed MOOE amounting to P7.40 billion in the 2025 budget.",
+          "time_taken": 4.332462310791016,
+          "token_count": 30,
+          "tokens_per_second": 6.924468777322759
+        },
+        "llama3.2:latest": {
+          "answer": "<partial_answer>\nThe context mentions that the Science Education Institute (SEI) will have the highest proposed MOOE amounting to P7.40 billion, followed by the OSEC with an amount of P6.05 billion. However, it does not explicitly state which DOST attached agency will have the highest MOOE in the proposed 2025 budget.\n</partial_answer>",
+          "time_taken": 4.32436728477478,
+          "token_count": 84,
+          "tokens_per_second": 19.424807022231196
+        },
+        "deepseek-r1:1.5b": {
+          "answer": "<think>\nOkay, so I need to figure out which DOST attached agency will have the highest Maintenance and Other Operating Expenses (MOOE) in the proposed 2025 budget based on the provided context. Let me go through the information step by step.\n\nFirst, looking at the context, it mentions that maintenance and other operating expenses (Mooe) will continue to corner the bulk of the dost's 2025 budget amounting to p20.68 billion. This is an increase of 11.6% from the actual budget in 2023 and 2.6% more than the 2024 program.\n\nWait, but I'm supposed to find out which agency has the highest MOOE. The context doesn't directly state which agency's MOE is the highest. It lists the agencies as pagasa (p611 million), osec (p576.8 million), phivolcs (p405 million), and pnri (p645 million). So, I need to figure out how these amounts compare.\n\nThe context says that the total expenditure program is p20.68 billion, with mooe cornering it at 71.9% of that amount. But each agency's MOE isn't directly given; instead, it mentions the top four attached agencies beefing up their proposed total capital outlay (cos) are pagasa, osec, phivolcs, and pnri.\n\nWait, but the context doesn't specify which agency has the highest MOE. It just lists them as having the largest capital outlay. So, I need to see if any of these agencies have a higher MOE than the others based on their allocations.\n\nLooking back at the text: \"the maintenance and other operating expenditures ( mooe ) will continue to corner the bulk (71.9%) of the dost's 2025 proposed budget amounting to p20.68 billion, or an increase of 11.6% from the actual budget in 2023 and 2.6% more than the 2024 program.\"\n\nIt doesn't specify which agency has the highest MOE beyond the fact that they are part of the top four with the largest capital outlay. So, without specific numbers for each agency's MOE, I can only say that among pagasa (p611 million), osec (p576.8 million), phivolcs (p405 million), and pnri (p645 million), their capital outlay is the largest.\n\nBut wait, the context doesn't provide the exact MOE for each agency; it only mentions that pagasa has p611 million, osec p576.8, phivolcs p405, and pnri p645. So, among these four, pnri has the highest capital outlay at 645 million.\n\nHowever, the question is about MOOE, not cos (capital outlay). The text says that the total expenditure program's capital outlay will have an increase of 35.3% or p3.12 billion in 2025. So, the agency with the largest capital outlay would also have a higher MOE.\n\nBut again, without specific numbers for each agency's MOE, I can't say which one is highest. The context only mentions that pagasa has the highest capital outlay among the top four attached agencies. But since the question is about maintenance and other operating expenses (MOOE), not capital expenditure (cos), I need to see if any of these agencies have a higher MOE than the others.\n\nWait, perhaps the text doesn't provide specific numbers for each agency's MOE beyond the fact that they are part of the top four with the largest capital outlay. So, without knowing which of pagasa, osec, phivolcs, or pnri has the highest MOE, I can only conclude that among these four, pnri has the highest capital outlay.\n\nBut since MOOE is a different metric than cos (capital expenditure), and the text doesn't specify each agency's MOE, I think the answer might be that pnri will have the highest MOE because they are part of the top four with the largest capital outlay. But wait, actually, MOE isn't necessarily tied to their capital expenditure; it could be a different percentage or allocation.\n\nWait, maybe I'm overcomplicating this. The context says that maintenance and other operating expenses (Mooe) will continue to corner the bulk of the budget at 71.9% of the total, which is p20.68 billion. It doesn't specify which agency's MOE is the highest among these four top agencies in terms of capital expenditure.\n\nSo, perhaps without specific numbers for each agency's MOE, I can only say that pnri has the highest capital outlay at 645 million, but MOOE might be a different metric. However, since the question is about maintenance and other operating expenses (MOOE), which are separate from capital expenditure, I need to see if any of these agencies have a higher MOE than the others.\n\nWait, perhaps the text doesn't provide specific numbers for each agency's MOE beyond their capital outlay percentages. So, without knowing how much each agency's MOE contributes relative to their capital expenditure, I can't determine which has the highest MOE.\n\nTherefore, based on the information given, pnri is part of the top four with the largest capital outlay, but without specific MOE numbers for each agency, I can only conclude that among pagasa, osec, phivolcs, and pnri, pnri has the highest capital expenditure. However, since MOOE isn't tied to capital expenditure, it's possible that another agency could have a higher MOE.\n\nWait, perhaps I'm missing something. The text does say that maintenance and other operating expenses (Mooe) will corner 71.9% of the budget, which is p20.68 billion. It doesn't specify how much each agency's MOE contributes to this percentage. So, without knowing the exact MOE for each agency, I can only infer that pnri has the highest capital expenditure among these four top agencies.\n\nBut since MOOE isn't tied to capital expenditure, it could be a different metric. However, the text doesn't provide specific numbers for each agency's MOE, so perhaps the answer is that pnri will have the highest maintenance and other operating expenses (MOOE) because they are part of the top four with the largest capital outlay.\n\nAlternatively, maybe the text implies that since pnri has the highest capital expenditure, it also has the highest MOE. But I'm not sure if MOE is directly tied to cos or just a different metric.\n\nGiven all this uncertainty, perhaps the best answer is that pnri will have the highest maintenance and other operating expenses (MOOE) because they are part of the top four with the largest capital outlay.\n</think>\n\npnri",
+          "time_taken": 12.127997875213623,
+          "token_count": 1520,
+          "tokens_per_second": 125.32983726081224
+        },
+        "llama3.2:1b": {
+          "answer": "Based on the provided context, the attached agency that will have the highest Maintenance and Other Operating Expenses (MOOE) in the proposed 2025 budget is:\n\n Pagasa (p611 million)\n\nThis is because MOOE accounts for the largest allocation amounting to p5.74 billion or 67.5% of the total expenditure program.",
+          "time_taken": 2.664259672164917,
+          "token_count": 77,
+          "tokens_per_second": 28.90108678386876
+        },
+        "gemma3:1b": {
+          "answer": "The context states: “the maintenance and other operating expenses ( mooe ) will cover the largest allocation amounting to p5. 74 billion or 67. 5 % of the total expenditure program.”\n",
+          "time_taken": 2.704693078994751,
+          "token_count": 45,
+          "tokens_per_second": 16.637747310214245
+        },
+        "llama3.1:latest": {
+          "answer": "The Science Education Institute (SEI) will have the highest proposed Maintenance and Other Operating Expenses (MOOE) amounting to P7.40 billion in the proposed 2025 budget.",
+          "time_taken": 10.264957427978516,
+          "token_count": 43,
+          "tokens_per_second": 4.189009092507071
+        }
+      }
+    },
+    {
+      "question": "For the fiscal year 2021, what is the total Retirement and Life Insurance Premiums (RLIP) in pesos for the Senate?",
+      "true_answer": "The total Retirement and Life Insurance Premiums (RLIP) for the Senate for fiscal year 2021 is 171,508,000 pesos.",
+      "source": "GARO-2021-1-(Attachment1).pdf",
+      "model_answers": {
+        "phi4-mini:latest": {
+          "answer": "I don't have enough information to answer this question.",
+          "time_taken": 3.82790207862854,
+          "token_count": 14,
+          "tokens_per_second": 3.6573558341951937
+        },
+        "qwen2.5:1.5b": {
+          "answer": "<p>For the fiscal year 2021, the total Retirement and Life Insurance Premiums (RLIP) in pesos for the Senate is <strong>662, 000</strong>.</p>\n\nExplanation: The context provides specific data on RLIP premiums for different organizations and departments. The Senate is mentioned as one of the entities that received these payments, with a total amount of 662, 000 pesos.",
+          "time_taken": 3.0784528255462646,
+          "token_count": 92,
+          "tokens_per_second": 29.88514205465364
+        },
+        "qwen2.5:3b": {
+          "answer": "I don't have enough information to answer this question.",
+          "time_taken": 2.564260244369507,
+          "token_count": 14,
+          "tokens_per_second": 5.459664256286234
+        },
+        "qwen2.5:latest": {
+          "answer": "I don't have enough information to answer this question. The provided context does not contain specific RLIP data for the Senate for fiscal year 2021.",
+          "time_taken": 4.619122266769409,
+          "token_count": 37,
+          "tokens_per_second": 8.010179827060004
+        },
+        "llama3.2:latest": {
+          "answer": "I don't have enough information to answer this question.",
+          "time_taken": 3.239952564239502,
+          "token_count": 14,
+          "tokens_per_second": 4.321050917387783
+        },
+        "deepseek-r1:1.5b": {
+          "answer": "<think>\nOkay, so I need to figure out the total Retirement and Life Insurance Premiums (RLIP) in pesos for the Senate during the fiscal year 2021 based on the provided context. Let me go through the context step by step.\n\nFirst, I see that the context is a bit lengthy with multiple sections labeled \"ps rlip (in pesos)\" followed by various numbers and units like millions of pesos or uacs codes. Each section seems to list different departments or entities with their respective premiums for RLIP in 2021.\n\nI'm looking for any mention ofRLIP specifically in the Senate context. Scanning through each part, I notice sections titled \"department of...\" which include \"retirement and life insurance premiums for fiscal year 2021.\" \n\nLooking at one section: \"department of retirement and life insurance ( roli ) 35,000,000 634,000,000 260,000,000 1,335,000,000 46,000,000 p 1,093,000 p 455,000,000 455,000,000 p 638,000,000 236,000,000 402,000 p 695,000,000 p 187,000,000 187,000,000 p 508,000,000 210,000 uacs codes organization / p / a / p 310102100001000...\" \n\nThis section lists several departments under the \"department of...\" label. Each department has numbers for various categories like RLIP, ROBI (retirement benefit interest), UACs (unique account codes), and other expenses.\n\nLooking at the \"department of retirement and life insurance\" line, I see that it includes RLIP amounts in millions of pesos. For example:\n- 35,000,000 (35 million)\n- 634,000,000 (634 million)\n- 260,000,000 (260 million)\n- 1,335,000,000 (1.335 billion)\n- 46,000,000 (46 million)\nAnd so on for ROBI and other categories.\n\nBut the question is specifically about RLIP in the Senate. So I need to focus on the RLIP numbers from this section. The first few entries are:\n\n- 35,000,000\n- 634,000,000\n- 260,000,000\n- 1,335,000,000\n- 46,000,000\n\nThese are all RLIP amounts in millions of pesos. To find the total, I should sum these numbers.\n\nLet me add them up:\n\n35 + 634 = 669 million\n669 + 260 = 929 million\n929 + 1,335 = 2,264 million\n2,264 + 46 = 2,310 million\n\nSo the total RLIP for the Senate in 2021 is 2,310 million pesos. That's 2,310,000,000 pesos.\n\nI should double-check if there are other RLIP numbers from this section that I missed. The next line has ROBI and UACs codes, so probably not relevant here. Therefore, the total is 2,310 million pesos.\n</think>\n\nThe total Retirement and Life Insurance Premiums (RLIP) for the Senate in 2021 was 2,310,000,000 pesos.\n\n<partial_answer>\nThe total Retirement and Life Insurance Premiums (RLIP) for the Senate in 2021 was 2,310,000,000 pesos.\n</partial_answer>",
+          "time_taken": 7.990426063537598,
+          "token_count": 647,
+          "tokens_per_second": 80.97190248119935
+        },
+        "llama3.2:1b": {
+          "answer": "For the fiscal year 2021, the total Retirement and Life Insurance Premiums (RLIP) in pesos for the Senate is not explicitly stated in the provided context.\n\nI don't have enough information to answer this question.",
+          "time_taken": 2.5801796913146973,
+          "token_count": 53,
+          "tokens_per_second": 20.54120500925055
+        },
+        "gemma3:1b": {
+          "answer": "1,928,000 580,000\n",
+          "time_taken": 2.471268892288208,
+          "token_count": 4,
+          "tokens_per_second": 1.6186016877735643
+        },
+        "llama3.1:latest": {
+          "answer": "I don't have enough information to answer this question.\n\nThe context provides RLIP figures for various departments and agencies, but it does not specify a total figure for the Senate or provide any specific information about the Senate's RLIP.",
+          "time_taken": 5.264936208724976,
+          "token_count": 61,
+          "tokens_per_second": 11.586085297465084
+        }
+      }
+    },
+    {
+      "question": "Which agency's legislative program involves the crafting of significant legislation and reform measures?",
+      "true_answer": "The Senate and House of Representatives legislative programs involve the crafting of significant legislation and reform measures.",
+      "source": "GARO-2021-1-(Attachment1).pdf",
+      "model_answers": {
+        "phi4-mini:latest": {
+          "answer": "The Senate's legislative program involves the crafting of significant legislation and reform measures.",
+          "time_taken": 3.5172958374023438,
+          "token_count": 25,
+          "tokens_per_second": 7.107733086922665
+        },
+        "qwen2.5:1.5b": {
+          "answer": "The agency's legislative program involves the crafting of significant legislation and reform measures.",
+          "time_taken": 2.143409490585327,
+          "token_count": 25,
+          "tokens_per_second": 11.663660215096343
+        },
+        "qwen2.5:3b": {
+          "answer": "I don't have enough information to answer this question.",
+          "time_taken": 2.485560417175293,
+          "token_count": 14,
+          "tokens_per_second": 5.632532568212627
+        },
+        "qwen2.5:latest": {
+          "answer": "The Senate's legislative program involves the crafting of significant legislation and reform measures.",
+          "time_taken": 9.098840713500977,
+          "token_count": 25,
+          "tokens_per_second": 2.7476027756925867
+        },
+        "llama3.2:latest": {
+          "answer": "<partial_answer>\n\nThe context does not explicitly mention which agency's legislative program involves the crafting of significant legislation and reform measures. However, it mentions that \"general management and supervision operations\" are responsible for this task.\n\nIt appears that the Senate Legislative Program is responsible for crafting significant legislation and reform measures, as indicated by the phrase \"senate legislative program legislation of laws and other related activities\".",
+          "time_taken": 3.4327309131622314,
+          "token_count": 123,
+          "tokens_per_second": 35.83152979698383
+        },
+        "deepseek-r1:1.5b": {
+          "answer": "<think>\nAlright, let me try to figure this out. The question is asking which agency's legislative program involves crafting significant legislation and reform measures. Looking at the context provided, I see several sections under \"General Management and Supervision Operations\" and another section under \"Agricultural Reform.\"\n\nFirst, in the \"General Management and Supervision Operations\" section, there are multiple sub-sections like \"Land Acquisition and Distribution,\" \"Supervision and Management,\" and so on. Each of these has a part about drafting legislation or reform measures. For example, the \"Tiller's Rights and Welfare Promoted\" subsection talks about agrarian justice delivery and legal services, which likely includes legislative aspects.\n\nThen, in the \"Agricultural Reform\" section, there are sub-sections like \"Judicial Assistance,\" \"Social Infrastructure Building,\" and others. These areas also deal with drafting legislation to address agricultural issues and improve social programs. For instance, \"Social Infrastructure Building\" mentions supporting operations policy formulation and monitoring, which would tie into legislative measures.\n\nSo, putting it together, both sections under General Management and Supervision Operations mention legislative activities related to crafting legislation and reform measures. The first part is about land-based issues affecting agrarian justice, while the second deals with social programs and infrastructure support. Both are part of the broader initiative in General Management and Supervision Operations.\n\nTherefore, the agencies involved are dar's General Management and Supervision Operations and their Agricultural Reform agency. Each handles specific parts of legislative work that contribute to significant legislation and reform measures.\n</think>\n\nThe agencies involved are dar's General Management and Supervision Operations and their Agricultural Reform agency. Both handle legislative activities related to significant legislation and reform measures.\n\n<partial_answer>\nThe agencies involved in crafting significant legislation and reform measures are dar's General Management and Supervision Operations and its Agricultural Reform agency. These agencies address issues like agrarian justice delivery, legal services, social infrastructure building, and policy formulation.\n</partial_answer>",
+          "time_taken": 4.3975670337677,
+          "token_count": 591,
+          "tokens_per_second": 134.39249372707104
+        },
+        "llama3.2:1b": {
+          "answer": "I don't have enough information to answer this question.\n\nPartial_answer: \nThe Department of Agrarian Reform (DAR) agency/operating unit is responsible for various programs such as land acquisition and distribution, tiller's rights and welfare promoted agrarian justice delivery program, adjudication of agrarian reform cases, provision of agrarian legal assistance, and social infrastructure building. However, the specific legislative program involving crafting significant legislation and reform measures may not be explicitly mentioned in the provided context.\n\nI don't have enough information to answer this question.",
+          "time_taken": 2.630251169204712,
+          "token_count": 155,
+          "tokens_per_second": 58.92973333298284
+        },
+        "gemma3:1b": {
+          "answer": "The Senate electoral tribunal senate electoral tribunal senate electoral tribunal senate electoral tribunal senate electoral tribunal.",
+          "time_taken": 2.2903225421905518,
+          "token_count": 33,
+          "tokens_per_second": 14.408450946143832
+        },
+        "llama3.1:latest": {
+          "answer": "The Senate's legislative program involves the crafting of significant legislation and reform measures.\n\nThis is stated in the context under \"general management and supervision operations oo : crafting of significant legislation and reform measures ensured senate legislative program\".",
+          "time_taken": 8.651102781295776,
+          "token_count": 71,
+          "tokens_per_second": 8.207046176067452
+        }
+      }
+    },
+    {
+      "question": "What percentage of the total expenditure program is allocated to Personnel Services (PS) for 2025?",
+      "true_answer": "28.8%",
+      "source": "ABN2024-11_DMW_FY2025.pdf",
+      "model_answers": {
+        "phi4-mini:latest": {
+          "answer": "I don't have enough information to answer this question.",
+          "time_taken": 2.8671085834503174,
+          "token_count": 14,
+          "tokens_per_second": 4.882968186420135
+        },
+        "qwen2.5:1.5b": {
+          "answer": "28.8%",
+          "time_taken": 1.8160820007324219,
+          "token_count": 1,
+          "tokens_per_second": 0.5506359292128341
+        },
+        "qwen2.5:3b": {
+          "answer": "I don't have enough information to answer this question.",
+          "time_taken": 2.2661283016204834,
+          "token_count": 14,
+          "tokens_per_second": 6.177937934930142
+        },
+        "qwen2.5:latest": {
+          "answer": "<partial_answer>\nThe context states that Personnel Services (PS) will be allotted P2.45 billion or 28.8% of the total expenditure program for 2025.\n</partial_answer>",
+          "time_taken": 4.706029891967773,
+          "token_count": 41,
+          "tokens_per_second": 8.712226853887728
+        },
+        "llama3.2:latest": {
+          "answer": "<partial_answer>\nI don't have enough information to determine the exact percentage of the total expenditure program allocated to Personnel Services (PS) for 2025. The context mentions that PS will be allotted P2.45 billion or 28.8% in 2024, but it does not provide a specific percentage for 2025.\n</partial_answer>",
+          "time_taken": 3.8696932792663574,
+          "token_count": 78,
+          "tokens_per_second": 20.156636294127107
+        },
+        "deepseek-r1:1.5b": {
+          "answer": "<think>\nOkay, let's try to figure out what percentage of the total expenditure program is allocated to Personnel Services (PS) for 2025 based on the provided context.\n\nFirst, I'll read through the context carefully. The table mentions various agencies with their respective allocations from 2023 to 2025. It specifically talks about the OES (OSE office of the Secretary) and other agencies like OEC (Office of Economic and Climate Change), OEEC (Office of Energy, Environment, and Climate Change), and others.\n\nLooking at the section on the expenditure program for the dost, it mentions that the office of the secretary (OSE) will receive a higher percentage share. The details are: OES gets 26.3% or $7.60 billion, followed by the Science Education Institute (SEI) with 22.4% or $7.49 billion, and the Philippine Science High School System (PSHS) with 13.0% or $2.75 billion. It also states that the Science and Technology Information Institute (STII) will receive the lowest proposal budget at 0.5% or $0.5 million.\n\nNow, focusing on Personnel Services (PS), I don't see any specific information about PS's allocation in the provided context. The tables only mention OES, OEC, OEEC, and others, but not PS. Therefore, based on the given context, there isn't enough data to determine the percentage allocated to PS for 2025.\n\nI should check if I've missed anything. The context doesn't provide any details about Personnel Services in either the proposed or actual allocations. It only mentions OES and other agencies. So yes, without additional information from the tables or elsewhere, I can't find the percentage for PS.\n</think>\n\n<partial_answer>\nThe context does not provide specific information on the allocation of Personnel Services (PS) for 2025. There is no mention of PS's percentage share in either the proposed or actual expenditure program allocations.\n</partial_answer>",
+          "time_taken": 4.742570877075195,
+          "token_count": 471,
+          "tokens_per_second": 99.31322318802577
+        },
+        "llama3.2:1b": {
+          "answer": "I don't have enough information to answer this question.\n\nPartial answer: \n<partial_answer> Personnel Services (PS) is allocated p2.45 billion or 28.8 % of the total expenditure program for 2025.</partial_answer>",
+          "time_taken": 2.512301206588745,
+          "token_count": 53,
+          "tokens_per_second": 21.09619653129272
+        },
+        "gemma3:1b": {
+          "answer": "The science and technology information institute (STII) will be getting the lowest proposed budget under the expenditure program of the dost with p146. 0 million or 0. 5 % of total.",
+          "time_taken": 2.692661762237549,
+          "token_count": 45,
+          "tokens_per_second": 16.712087879394808
+        },
+        "llama3.1:latest": {
+          "answer": "28.8% \n\nThis percentage is mentioned in the context as the allocation for Personnel Services (PS) in the 2025 expenditure program of the Department of Science and Technology (DOST).",
+          "time_taken": 9.034383773803711,
+          "token_count": 45,
+          "tokens_per_second": 4.980970603715435
+        }
+      }
+    },
+    {
+      "question": "Which region, other than the Central Office, receives an allocation in the DMW budget for FY 2025?",
+      "true_answer": "Region 8 – Eastern Visayas",
+      "source": "ABN2024-11_DMW_FY2025.pdf",
+      "model_answers": {
+        "phi4-mini:latest": {
+          "answer": "region viii – eastern visayas receives an allocation in the DMW budget for FY 2025 besides the Central Office.",
+          "time_taken": 3.2108705043792725,
+          "token_count": 27,
+          "tokens_per_second": 8.408934574961831
+        },
+        "qwen2.5:1.5b": {
+          "answer": "Region VIII - Eastern Visayas receives an allocation in the DMW budget for FY 2025.",
+          "time_taken": 1.9749598503112793,
+          "token_count": 20,
+          "tokens_per_second": 10.126788145514826
+        },
+        "qwen2.5:3b": {
+          "answer": "region viii – eastern visayas",
+          "time_taken": 2.7025959491729736,
+          "token_count": 7,
+          "tokens_per_second": 2.590102305948502
+        },
+        "qwen2.5:latest": {
+          "answer": "Region VIII – Eastern Visayas receives an allocation in the DMW budget for FY 2025. The budget allocated to Region VIII is P155.1 million (1.8% share).",
+          "time_taken": 4.962267875671387,
+          "token_count": 37,
+          "tokens_per_second": 7.456268167504754
+        },
+        "llama3.2:latest": {
+          "answer": "Region VIII – Eastern Visayas receives an allocation in the DMW budget for FY 2025, with a budget of P8.35 billion (98.2% share).",
+          "time_taken": 3.52763295173645,
+          "token_count": 32,
+          "tokens_per_second": 9.071238543751624
+        },
+        "deepseek-r1:1.5b": {
+          "answer": "<think>\nOkay, so I need to figure out which region other than the Central Office receives an allocation in the DMW budget for FY 2025 based on the provided context. Let me read through the context carefully.\n\nThe context mentions that the total expenditure program is allocated to the Central office and Region VIII – Eastern Visayas. The budget breakdown shows that Region VIII gets a share of 1.8% or $155,100 million. It also says that Region VIII has been the sole recipient since the operation of DMW in 2023. \n\nLooking at the tables provided (tables 5 and 6), table 5 specifically details the regional distribution for FY 2023-2025. In 2024, Region 8 gets $129 million with a share of 1.4%, and in 2025, it's $999 million at 1.8%. \n\nSo, according to the context, only Region VIII – Eastern Visayas receives an allocation in the 2025 budget. The Central Office is mentioned as getting 98.2% of its share, but that doesn't count since we're excluding it.\n\nI don't see any other regions receiving allocations beyond Region VIII. Therefore, the answer should be Region VIII.\n</think>\n\nThe region other than the Central Office that receives an allocation in the DMW budget for FY 2025 is Region VIII – Eastern Visayas.\n\nAnswer:\nRegion VIII – Eastern Visayas",
+          "time_taken": 3.986961603164673,
+          "token_count": 314,
+          "tokens_per_second": 78.75671532696998
+        },
+        "llama3.2:1b": {
+          "answer": "I don't have enough information to answer this question.\n\nPartial_answer: \n<partial_answer>",
+          "time_taken": 2.3498363494873047,
+          "token_count": 22,
+          "tokens_per_second": 9.36235410810631
+        },
+        "gemma3:1b": {
+          "answer": "Region VIII – Eastern Visayas.",
+          "time_taken": 2.195432662963867,
+          "token_count": 7,
+          "tokens_per_second": 3.188437576832757
+        },
+        "llama3.1:latest": {
+          "answer": "Region VIII – Eastern Visayas.",
+          "time_taken": 8.496203184127808,
+          "token_count": 7,
+          "tokens_per_second": 0.8238974337474719
+        }
+      }
+    },
+    {
+      "question": "Who was the President of the Constitutional Commission of 1986?",
+      "true_answer": "Cecilia Munoz Palma",
+      "source": "debate_vol2_1.pdf",
+      "model_answers": {
+        "phi4-mini:latest": {
+          "answer": "Cecilia Munoz Palma",
+          "time_taken": 2.812349796295166,
+          "token_count": 4,
+          "tokens_per_second": 1.4222981811399773
+        },
+        "qwen2.5:1.5b": {
+          "answer": "The President of the Constitutional Commission of 1986 was Madam President.",
+          "time_taken": 1.917168378829956,
+          "token_count": 18,
+          "tokens_per_second": 9.388846696389475
+        },
+        "qwen2.5:3b": {
+          "answer": "I don't have enough information to answer this question.",
+          "time_taken": 2.2886455059051514,
+          "token_count": 14,
+          "tokens_per_second": 6.117155305999672
+        },
+        "qwen2.5:latest": {
+          "answer": "The President of the Constitutional Commission of 1986 was Ambrosio B. Padilla.",
+          "time_taken": 4.031714677810669,
+          "token_count": 19,
+          "tokens_per_second": 4.712635074245263
+        },
+        "llama3.2:latest": {
+          "answer": "<partial_answer>\nI don't have enough information to determine who was the President of the Constitutional Commission of 1986 from the provided context. The list of commissioners is provided, but there is no indication of a president among them.</partial_answer>",
+          "time_taken": 3.6742382049560547,
+          "token_count": 65,
+          "tokens_per_second": 17.69074196450402
+        },
+        "deepseek-r1:1.5b": {
+          "answer": "<think>\nOkay, so I need to figure out who was the President of the Constitutional Commission of 1986 based on the provided context. Let me go through each piece of information step by step.\n\nFirst, looking at communication number 256: It mentions that the committee is from the constitutional commission of 1986 and talks about autonomy granting. But it doesn't specify who the president was or any other details related to leadership positions.\n\nCommunication 257 also discusses the same commission but focuses on sending a resolution. Again, no information about the president here.\n\nThen there are three more communications (240, 241, and 242) that talk about the constitutional commission as well. Communication 240 mentions protests against making religious instruction in public schools compulsory. Communication 241 is from a Catholic women's league and suggests measures to improve health care delivery. Communication 242 talks about social justice.\n\nWait, none of these communications mention the president or any specific role within the constitutional commission. They all focus on different issues related to the committee itself. So, based on the context provided, I don't see any information indicating who was the president of this commission in 1986.\n</think>\n\nThe context does not provide any information about the president of the Constitutional Commission of 1986. It focuses instead on various issues and actions related to the committee itself.\n\n<partial_answer>\nI don't have enough information to answer this question.\n</partial_answer>",
+          "time_taken": 3.734722852706909,
+          "token_count": 389,
+          "tokens_per_second": 104.15766185114771
+        },
+        "llama3.2:1b": {
+          "answer": "The President of the Constitutional Commission of 1986 was Ambrosio B. Padilla.",
+          "time_taken": 2.3530385494232178,
+          "token_count": 19,
+          "tokens_per_second": 8.074665842026823
+        },
+        "gemma3:1b": {
+          "answer": "Mr. rama.\n",
+          "time_taken": 2.1847565174102783,
+          "token_count": 2,
+          "tokens_per_second": 0.915433817938998
+        },
+        "llama3.1:latest": {
+          "answer": "The President of the Constitutional Commission of 1986 was Cecilia Munoz Palma.",
+          "time_taken": 9.08748459815979,
+          "token_count": 19,
+          "tokens_per_second": 2.090787587562733
+        }
+      }
+    },
+    {
+      "question": "Who was the Secretary-General of the Constitutional Commission of 1986?",
+      "true_answer": "FLERIDA RUTH P. ROMERO",
+      "source": "debate_vol2_1.pdf",
+      "model_answers": {
+        "phi4-mini:latest": {
+          "answer": "Roberto M. San Andres was the Secretary-General of the Constitutional Commission of 1986.",
+          "time_taken": 3.5503811836242676,
+          "token_count": 22,
+          "tokens_per_second": 6.196517743354577
+        },
+        "qwen2.5:1.5b": {
+          "answer": "The Secretary-General of the Constitutional Commission of 1986 was Hon. Flerida Ruth P. Romero.",
+          "time_taken": 1.9754929542541504,
+          "token_count": 23,
+          "tokens_per_second": 11.6426636452792
+        },
+        "qwen2.5:3b": {
+          "answer": "The Secretary-General of the Constitutional Commission of 1986 was Flerida Ruth P. Romero.",
+          "time_taken": 2.4397084712982178,
+          "token_count": 22,
+          "tokens_per_second": 9.017470840806386
+        },
+        "qwen2.5:latest": {
+          "answer": "The Secretary-General of the Constitutional Commission of 1986 was Flerida Ruth P. Romero.",
+          "time_taken": 4.28113055229187,
+          "token_count": 22,
+          "tokens_per_second": 5.138829505730086
+        },
+        "llama3.2:latest": {
+          "answer": "<partial_answer>\nThe Secretary-General of the Constitutional Commission of 1986 is Hon. Flerida Ruth P. Romero.\n</partial_answer>",
+          "time_taken": 3.9481828212738037,
+          "token_count": 32,
+          "tokens_per_second": 8.104994486976626
+        },
+        "deepseek-r1:1.5b": {
+          "answer": "<think>\nAlright, let's tackle this question step by step. The question is asking who was the Secretary-General of the Constitutional Commission of 1986. \n\nFirst, I'll look through the provided context to find any mention of the Secretary-General for that specific commission. Scanning through the text, I see several letters and names mentioned under different communications related to the constitutional commission.\n\nLooking at communication no. 256, it mentions Mr. ponciano l. bennagen as the Secretary-General in a letter he wrote to the committee on general provisions. Similarly, communication no. 257 also refers to ponciano l. bennagen as the Secretary-General when he addressed the committee on local governments.\n\nI notice that ponciano l. bennagen is consistently mentioned in these communications. This repetition suggests that ponciano was indeed the Secretary-General for the Constitutional Commission of 1986. \n\nAdditionally, communication no. 240 mentions Mr. Minda Luz m.quesada, but she's not the Secretary-General; instead, ponciano is. Communication no. 241 refers to liceria h.ona from the Catholic Women's League, which doesn't mention a Secretary-General either. Communication no. 242 also doesn't provide any information about a Secretary-General.\n\nTherefore, based on the context provided, ponciano l. bennagen is clearly identified as the Secretary-General of the Constitutional Commission of 1986.\n</think>\n\nThe Secretary-General of the Constitutional Commission of 1986 was Mr. ponciano l. bennagen.\n\nAnswer: ponciano l. bennagen",
+          "time_taken": 4.575019598007202,
+          "token_count": 389,
+          "tokens_per_second": 85.02695817290959
+        },
+        "llama3.2:1b": {
+          "answer": "The Secretary-General of the Constitutional Commission of 1986 was Hon. Florangel Rosario Braid.\n\n(I don't have enough information to answer this question.)",
+          "time_taken": 2.406621217727661,
+          "token_count": 39,
+          "tokens_per_second": 16.20529218005645
+        },
+        "gemma3:1b": {
+          "answer": "Secretary-general roberto m. san andres",
+          "time_taken": 2.223743200302124,
+          "token_count": 9,
+          "tokens_per_second": 4.047229913407823
+        },
+        "llama3.1:latest": {
+          "answer": "The Secretary-General of the Constitutional Commission of 1986 was Hon. Flerida Ruth P. Romero.",
+          "time_taken": 9.261409521102905,
+          "token_count": 23,
+          "tokens_per_second": 2.4834232788856334
+        }
+      }
+    },
+    {
+      "question": "According to Mr. Padilla, what specific paragraph was deleted from the committee report on the Article on the Judiciary that he regretted?",
+      "true_answer": "Paragraph 3, Section 12 of the committee report on the Article on the Judiciary — on the right of appeal by the State or the offended party from a judgment of acquittal by a petition for review on certiorari based on the ground that the judgment is manifestly against the evidence and with a great abuse of discretion amounting to lack or excess of jurisdiction — was finally deleted from the approved version.",
+      "source": "debate_vol2_2.pdf",
+      "model_answers": {
+        "phi4-mini:latest": {
+          "answer": "The specific paragraph that was deleted from the committee report on the Article on the Judiciary which Commissioner Padilla regretted is: \"paragraph 3, section 12 of the committee report.\"",
+          "time_taken": 4.226363658905029,
+          "token_count": 47,
+          "tokens_per_second": 11.120671052754796
+        },
+        "qwen2.5:1.5b": {
+          "answer": "<partial_answer>\nParagraph 3, section 12 of the committee report on the article on the judiciary was deleted that Mr. Padilla regretted.",
+          "time_taken": 2.4286701679229736,
+          "token_count": 34,
+          "tokens_per_second": 13.999430819820704
+        },
+        "qwen2.5:3b": {
+          "answer": "I don't have enough information to answer this question. The context does not specify which paragraph Mr. Padilla regretted was deleted from the committee report on the Article on the Judiciary.",
+          "time_taken": 3.2391443252563477,
+          "token_count": 48,
+          "tokens_per_second": 14.818728398649311
+        },
+        "qwen2.5:latest": {
+          "answer": "According to Mr. Padilla, he regretted that paragraph 3, section 12 of the committee report on the Article on the Judiciary—specifically, the right of appeal by the state or the offended party from a judgment of acquittal by a petition for review on certiorari based on the ground that the judgment is manifestly against the evidence and with a great abuse of discretion amounting to lack or excess of jurisdiction—was finally deleted from the approved version.",
+          "time_taken": 5.670714616775513,
+          "token_count": 115,
+          "tokens_per_second": 20.279631011548137
+        },
+        "llama3.2:latest": {
+          "answer": "<partial_answer>\nThe specific paragraph that was deleted from the committee report on the Article on the Judiciary is paragraph 3, Section 12, which deals with the right of appeal by the state or the offended party from a judgment of acquittal by a petition for review on certiorari based on the ground that the judgment is manifestly against the evidence and with a great abuse of discretion amounting to lack or excess of jurisdiction.\n</partial_answer>",
+          "time_taken": 4.28026556968689,
+          "token_count": 113,
+          "tokens_per_second": 26.400231051146246
+        },
+        "deepseek-r1:1.5b": {
+          "answer": "<think>\nOkay, so I need to figure out what specific paragraph Mr. Padilla regretted in his committee report. Let me read through the context carefully.\n\nFirst, I see that Mr. Padilla is a member of the Committee on the Judiciary. He mentions that he voted in favor of an approved version but wants to state regretting a certain paragraph. The paragraph in question is 3, section 12 of the committee report on the Article on the Judiciary. \n\nLooking through the context, I find a part where Mr. Padilla says: \"the right of appeal by the state or the offended party from a judgment of acquittal by a petition for review on certiorari based on the ground that the judgment is manifestly against the evidence and with a great abuse of discretion amounting to lack or excess of jurisdiction — was finally deleted from the approved version.\"\n\nSo, he's referring specifically to paragraph 3, section 12. The context clearly states that this paragraph was deleted. There are no other details mentioned about other paragraphs being affected.\n\nI don't see any ambiguity here; the context provides a clear answer. So, I can confidently say that Mr. Padilla regretted paragraph 3, section 12.\n</think>\n\nMr. Padilla regretted paragraph 3, section 12 of the committee report on the Article on the Judiciary, which was deleted.\n\n<partial_answer>Mr. Padilla regretted paragraph 3, section 12 of the committee report on the Article on the Judiciary, which was deleted.</partial_answer>",
+          "time_taken": 4.410359859466553,
+          "token_count": 367,
+          "tokens_per_second": 83.21316438890088
+        },
+        "llama3.2:1b": {
+          "answer": "I don't have enough information to answer this question.\n\nThe context does not provide a clear and complete answer regarding what specific paragraph was deleted from the committee report on the Article on the Judiciary by Commissioner Padilla that he regretted.",
+          "time_taken": 3.068972110748291,
+          "token_count": 65,
+          "tokens_per_second": 21.17972977739162
+        },
+        "gemma3:1b": {
+          "answer": "According to Mr. Padilla, he regretted that paragraph 3, section 12 of the committee report on the article on the judiciary — on the right of appeal by the state or the offended party from a judgment of acquittal by a petition for review on certiorari based on the ground that the judgment is manifestly against the evidence and with a great abuse of discretion amounting to lack or excess of jurisdiction — was finally deleted from the approved version.",
+          "time_taken": 3.3422458171844482,
+          "token_count": 113,
+          "tokens_per_second": 33.80960174114084
+        },
+        "llama3.1:latest": {
+          "answer": "Paragraph 3, Section 12 of the committee report on the Article on the Judiciary was deleted from the approved version.",
+          "time_taken": 8.75667667388916,
+          "token_count": 29,
+          "tokens_per_second": 3.3117586819749554
+        }
+      }
+    }
+  ]
+}
