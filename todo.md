@@ -1,2 +1,0 @@
-Create a RAG pipeline without a ui from @app.py. Include print statements for debugging. 
-I intend to use ollama (llama3.1:latest) and nomic-embed-text:latest as an embedding model. But in the future, I will use openai's models. 

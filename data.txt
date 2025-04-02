@@ -1,0 +1,93 @@
+Easy
+  raw
+  "total_questions": 51,
+  "processed_questions": 51,
+  "status_counts": {
+    "source_mismatch": 49,
+    "mismatch_both": 1,
+    "refusal": 1
+  },
+  "correct_answers_count": 49,
+  "llm_judge_evaluated_count": 50,
+  "average_llm_judge_score": 0.91,
+  "total_rag_time_seconds": 69.22,
+  "total_script_time_seconds": 104.08,
+  "average_rag_time_per_question_seconds": 1.36
+
+  standard
+  "total_questions": 51,
+  "processed_questions": 51,
+  "status_counts": {
+    "success": 48,
+    "refusal": 2,
+    "answer_mismatch": 1
+  },
+  "correct_answers_count": 48,
+  "llm_judge_evaluated_count": 49,
+  "average_llm_judge_score": 0.943,
+  "total_rag_time_seconds": 72.29,
+  "total_script_time_seconds": 167.0,
+  "average_rag_time_per_question_seconds": 1.42
+
+
+Medium
+  raw
+  "total_questions": 50,
+  "processed_questions": 50,
+  "status_counts": {
+    "refusal": 6,
+    "source_mismatch": 42,
+      "mismatch_both": 2
+    },
+    "correct_answers_count": 42,
+    "llm_judge_evaluated_count": 44,
+    "average_llm_judge_score": 0.864,
+    "total_rag_time_seconds": 75.04,
+    "total_script_time_seconds": 100.48,
+    "average_rag_time_per_question_seconds": 1.5
+
+  standard
+  "total_questions": 50,
+  "processed_questions": 50,
+  "status_counts": {
+    "answer_mismatch": 3,
+    "refusal": 4,
+    "success": 43
+  },
+  "correct_answers_count": 43,
+  "llm_judge_evaluated_count": 46,
+  "average_llm_judge_score": 0.883,
+  "total_rag_time_seconds": 68.48,
+  "total_script_time_seconds": 94.44,
+  "average_rag_time_per_question_seconds": 1.37
+
+Hard
+  raw
+  "total_questions": 50,
+  "processed_questions": 50,
+  "status_counts": {
+    "source_mismatch": 38,
+    "refusal": 4,
+    "mismatch_both": 8
+  },
+  "correct_answers_count": 38,
+  "llm_judge_evaluated_count": 46,
+  "average_llm_judge_score": 0.846,
+  "total_rag_time_seconds": 75.34,
+  "total_script_time_seconds": 110.74,
+  "average_rag_time_per_question_seconds": 1.51
+
+  standard
+  "total_questions": 50,
+  "processed_questions": 50,
+  "status_counts": {
+    "success": 44,
+    "refusal": 5,
+    "answer_mismatch": 1
+  },
+  "correct_answers_count": 44,
+  "llm_judge_evaluated_count": 45,
+  "average_llm_judge_score": 0.947,
+  "total_rag_time_seconds": 75.44,
+  "total_script_time_seconds": 102.36,
+  "average_rag_time_per_question_seconds": 1.51
